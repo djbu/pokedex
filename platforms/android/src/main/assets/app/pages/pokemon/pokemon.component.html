@@ -1,0 +1,15 @@
+<ActionBar [title]="name">
+  <NavigationButton text="Back" android.systemIcon="ic_menu_back" (tap)="navigateBack()"></NavigationButton>
+</ActionBar>
+<StackLayout class="item-group">
+  <Label [text]="'Height:' + height" textWrap="true"></Label>
+  <Label [text]="'Weight:' + weight" textWrap="true"></Label>
+  <Image [src]="pokeimg"></Image>
+ 
+  <ActivityIndicator
+    [busy]="isLoading"
+    [visibility]="isLoading ? 'visible' : 'collapse'"
+    horizontalAlignment="center"
+    verticalAlignment="center">
+  </ActivityIndicator>
+</StackLayout>

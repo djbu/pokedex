@@ -1,0 +1,2 @@
+C:\Users\daniel\Documents\proyectosns\pokedex\platforms\android\src\main\assets\app\app.component.js
+C:\Users\daniel\Documents\proyectosns\pokedex\platforms\android\src\main\assets\app\app.module.js

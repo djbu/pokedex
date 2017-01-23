@@ -1,0 +1,18 @@
+<ActionBar title="My Pokedex"></ActionBar>
+<GridLayout>
+  <Image src="http://pokeapi.co/media/sprites/pokemon/150.png" [class.hide]="!isLoading"></Image>
+ 
+  <ListView [items]="pokemon" [class.visible]="listLoaded" class="small-spacing" (itemTap)="showDetails($event)">
+    <template let-item="item" let-x="index">
+      <DockLayout stretchLastChild="true">
+          <Image 
+            dock="left" 
+            [src]="'http://pokeapi.co/media/sprites/pokemon/' + (x+1) + '.png'"
+            width="45"></Image>
+          <Label [text]="x+1 + '.  ' + item.name" class="medium-spacing"></Label>
+      </DockLayout>
+    </template>
+  </ListView>
+  <ActivityIndicator [busy]="isLoading" [visibility]="isLoading ? 'visible' : 'collapse'" row="1" horizontalAlignment="center"
+    verticalAlignment="center"></ActivityIndicator>
+</GridLayout>
